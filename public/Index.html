@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miñas Pretas</title>
+  <link rel="icon" type="image/png" href="/Imagens/logo 1.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Playfair Display', serif; }
+  </style>
+</head>
+<body class="bg-[#fef5ec] text-[#3d2c23] relative">
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5571920019225" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.72 11.06c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.66.14s-.76.95-.93 1.15c-.17.19-.34.21-.63.07-.29-.14-1.23-.45-2.35-1.43-.87-.78-1.45-1.75-1.62-2.04-.17-.29-.02-.45.13-.6.14-.14.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.66-1.6-.91-2.2-.24-.58-.49-.5-.66-.51H6.4c-.17 0-.45.07-.68.34-.24.26-.89.87-.89 2.13 0 1.26.91 2.49 1.04 2.66.13.17 1.78 2.71 4.32 3.8 2.53 1.08 2.53.72 2.99.68.46-.04 1.45-.59 1.66-1.16.21-.56.21-1.04.15-1.15-.05-.1-.26-.17-.55-.31z" /></svg>
+  </a>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-12 bg-[#fef5ec]">
+    <div>
+      <h1 class="text-4xl md:text-5xl font-bold leading-snug max-w-lg">Resgate cultural com estilo. Vista sua história</h1>
+      <a href="vermais.html" class="mt-6 inline-block px-6 py-3 bg-[#914c2e] text-white rounded-xl hover:bg-[#7c3f26]">Ver Ecobags</a>
+    </div>
+    <img src="/imagens/logo 1.png" alt="Modelo com ecobag" class="w-72 mt-10 md:mt-0" />
+  </section>
+
+  <!-- Produtos em Destaque -->
+  <section id="produtos" class="px-6 md:px-20 py-16 bg-[#fffaf5]">
+    <h2 class="text-3xl font-bold mb-10 text-center">Produtos em Destaque</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div class="text-center cursor-pointer" onclick="openModal('Malaika')">
+        <img src="/imagens/Malaika.jpg" class="w-full rounded-xl mb-4" alt="Ecobag 1" />
+        <p class="font-semibold">Ecobag Malaika</p>
+      </div>
+      <div class="text-center cursor-pointer" onclick="openModal('Oluchi')">
+        <img src="/imagens/Oluchi.png" class="w-full rounded-xl mb-4" alt="Ecobag 2" />
+        <p class="font-semibold">Ecobag Oluchi</p>
+      </div>
+      <div class="text-center cursor-pointer" onclick="openModal('Sekai')">
+        <img src="/imagens/Sekai.png" class="w-full rounded-xl mb-4" alt="Ecobag 3" />
+        <p class="font-semibold">Ecobag Sekai</p>
+      </div>
+      <div class="text-center cursor-pointer" onclick="openModal('Zainab')">
+        <img src="/imagens/Zainab.png" class="w-full rounded-xl mb-4" alt="Ecobag 4" />
+        <p class="font-semibold">Ecobag Zainab</p>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <a href="vermais.html" class="px-6 py-3 bg-[#914c2e] text-white rounded-xl hover:bg-[#7c3f26]">Ver Mais</a>
+    </div>
+  </section>
+
+  <!-- Modal Produto -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center hidden z-50">
+    <div class="bg-white p-8 rounded-xl w-11/12 md:w-1/2 relative">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-700">&times;</button>
+      <h3 id="modalTitle" class="text-2xl font-bold mb-4"></h3>
+      <p id="modalDescription">Descrição do produto selecionado.</p>
+      <a id="modalWhatsApp" href="#" target="_blank" class="mt-6 inline-block px-6 py-3 bg-green-600 text-white rounded-xl hover:bg-green-700">Comprar pelo WhatsApp</a>
+    </div>
+  </div>
+
+  <script>
+    function openModal(produto) {
+      document.getElementById('modal').classList.remove('hidden');
+      document.getElementById('modalTitle').innerText = `Ecobag ${produto}`;
+      document.getElementById('modalDescription').innerText = `A Ecobag ${produto} é feita com materiais ecológicos, pensada para quem valoriza cultura e identidade.`;
+      document.getElementById('modalWhatsApp').href = `https://wa.me/5571920019225?text=Olá! Gostaria de comprar a Ecobag ${produto}.`;
+    }
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+    }
+  </script>
+
+  <!-- Sobre a Marca -->
+  <section class="bg-[#914c2e] text-white px-6 md:px-20 py-16">
+    <div class="md:flex items-center justify-between">
+      <div>
+        <h3 class="text-3xl font-bold mb-4">Por que criamos a Miñas Pretas</h3>
+        <p class="max-w-xl">Promovemos a representatividade e celebramos as raízes afro-brasileiras através dos nossos produtos. Cada estampa conta uma história, cada detalhe celebra quem somos.</p>
+      </div>
+      <div class="mt-6 md:mt-0">
+        <img src="/imagens/logo 1.png" alt="Ícone cultural" class="w-20 mx-auto md:mx-0" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="px-6 md:px-20 py-16 bg-[#fffaf5]">
+    <h2 class="text-3xl font-bold mb-10 text-center">Depoimentos</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="font-semibold mb-2">Marlana M.</p>
+        <p class="text-sm">“Amei a qualidade e os detalhes da estampa!”</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="font-semibold mb-2">Juliana R.</p>
+        <p class="text-sm">“Me sinto representada e cheia de orgulho!”</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <p class="font-semibold mb-2">Camila S.</p>
+        <p class="text-sm">“Entrega rápida e produto lindíssimo. Recomendo!”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-[#3d2c23] text-white text-center py-8">
+    <p>&copy; 2025 Miñas Pretas - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
