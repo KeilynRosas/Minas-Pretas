@@ -4,7 +4,7 @@
 
 ## 🌐 Acesse o site
 
-> 📍 O site está hospedado no [Netlify](https://pages.github.com). 
+> 📍 O site está hospedado no [Netlify](https://minaspretas.netlify.app/). 
 
 ---
 
@@ -12,7 +12,7 @@
 
 | Página Inicial                       | Catálogo de Produtos |
 |----------------                      |----------------------|
-| ![Home](./public/imagens/inicio1.png) ![Home](./public/imagens/inicio2.png) ![Home](./public/imagens/inicio3.png) | ![Produtos](./public/imagens/produtos.png) |
+| ![Home](./public/imagens/inicio1.png) ![Home](./public/imagens/inicio2.png) ![Home](./public/imagens/inicio3.png) |         ![Produtos](./public/imagens/produtos.png) |
 
 ---
 
